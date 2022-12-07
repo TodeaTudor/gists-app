@@ -3,4 +3,8 @@
     font-family: Roboto serif;
     border: 1px solid black;
     font-size: 16px;
+    margin: 10px auto auto;
+    font-weight: bold;
+    padding:10px;
+    border-radius: 10px;
 }

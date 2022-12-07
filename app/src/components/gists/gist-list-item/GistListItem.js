@@ -1,4 +1,4 @@
-import GistFiles from "./GistFiles";
+import GistFilesList from "./GistFilesList";
 import styles from './GistListItem.module.css';
 import {useApi} from "../../../hooks/use-api";
 import {formatGetGistFileContent, formatGetGistForks} from "../../../lib/gists-request-formatter";
@@ -33,7 +33,8 @@ const GistListItem = (props) => {
 
   return (
     <li key={props.gist.id} className={styles['gist-list-item-container']}>
-      <GistFiles handleFileContentRequest={handleFileContentRequest} gistFiles={props.gist.files}/>
+      <p><b>Gist id</b>: {props.gist.id}</p>
+      <GistFilesList handleFileContentRequest={handleFileContentRequest} gistFiles={props.gist.files}/>
       {selectedFile !== '' && <GistFileContent fileName={selectedFile} fileContent={fileContent}/>}
       {forks.length > 0 && <GistForksList forks={forks}/>}
     </li>

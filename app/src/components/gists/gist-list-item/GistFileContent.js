@@ -6,7 +6,7 @@ const GistFileContent = (props) => {
     <div className={styles['file-content-container']}>
       <span>File content of <b>{props.fileName}</b></span>
       <hr/>
-      <input type="text" value={props.fileContent} readOnly={true} className={styles['file-content-text-box']}/>
+      <p className={styles['file-content-text-box']}>{props.fileContent}</p>
     </div>
   );
 }

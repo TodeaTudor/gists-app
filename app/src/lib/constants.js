@@ -11,3 +11,5 @@ export const NUMBER_OF_MOST_RECENT_FORKS = 3;
 
 export const GET_GISTS_ERROR_MESSAGE = 'The username is invalid or the number of requests to the ' +
   'API from this IP has been exceeded.';
+
+export const GET_GISTS_EMPTY_MESSAGE = 'The user has no public gists';

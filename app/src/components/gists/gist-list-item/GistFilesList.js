@@ -1,14 +1,14 @@
 import {formatGistFiles} from "../../../lib/gists-formatter";
 import GistFileCard from "./GistFileCard";
-import styles from './GistFiles.module.css';
+import styles from './GistFilesList.module.css';
 
-const GistFiles = (props) => {
+const GistFilesList = (props) => {
 
   const files = formatGistFiles(props.gistFiles);
 
   return (
     <>
-      <p>Gist files:</p>
+      <p><b>Gist files</b>:</p>
       <ul className={styles['ul']}>
         {files.map((file, index) => {
           return (
@@ -22,4 +22,4 @@ const GistFiles = (props) => {
   )
 }
 
-export default GistFiles;
+export default GistFilesList;
