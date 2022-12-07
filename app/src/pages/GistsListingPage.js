@@ -1,6 +1,8 @@
-import GistsForm from "../components/gists/GistsForm";
+import GistsForm from "../components/gists/gists-form/GistsForm";
 import {useApi} from "../hooks/use-api";
 import {formatGetGistsByUsername} from "../lib/gists-request-formatter";
+import ErrorCard from "../components/common/error-card/ErrorCard";
+import LoadingSpinner from "../components/common/loading-spinner/LoadingSpinner";
 
 const GistsListingPage = () => {
 
@@ -16,8 +18,8 @@ const GistsListingPage = () => {
   return (
     <>
       <GistsForm submitForm={submitForm}/>
-      {isLoading && <p>Loading....</p>}
-      {error && <p>We have a problem</p>}
+      {isLoading && <LoadingSpinner/>}
+      {error && <ErrorCard> Invalid username </ErrorCard>}
     </>
   );
 }

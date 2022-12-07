@@ -1,6 +1,6 @@
 import styles from './GistsForm.module.css'
-import FormInput from "../common/form-input/FormInput";
-import FormButton from "../common/form-button/FormButton";
+import FormInput from "../../common/form-input/FormInput";
+import FormButton from "../../common/form-button/FormButton";
 import { useState } from "react";
 
 const GistsForm = (props) => {
