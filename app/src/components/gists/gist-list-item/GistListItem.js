@@ -24,6 +24,12 @@ const GistListItem = (props) => {
   }, [getGistForks, props.gist.id]);
 
   const handleFileContentRequest = async (fileUrl, fileName) => {
+    // if the user clicks the second time on the file card, we should close the content box
+    if (selectedFile === fileName) {
+      setSelectedFile('');
+      return;
+    }
+
     await getFileContent({
       requestData: formatGetGistFileContent(fileUrl),
     });
