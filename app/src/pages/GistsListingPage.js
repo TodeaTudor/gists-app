@@ -4,6 +4,7 @@ import {formatGetGistsByUsername} from "../lib/gists-request-formatter";
 import ErrorCard from "../components/common/error-card/ErrorCard";
 import LoadingSpinner from "../components/common/loading-spinner/LoadingSpinner";
 import GistsList from "../components/gists/gists-list/GistsList";
+import {GET_GISTS_ERROR_MESSAGE} from "../lib/constants";
 
 const GistsListingPage = () => {
 
@@ -20,7 +21,7 @@ const GistsListingPage = () => {
     <>
       <GistsForm submitForm={submitForm}/>
       {isLoading && <LoadingSpinner/>}
-      {error && <ErrorCard> Invalid username </ErrorCard>}
+      {error && <ErrorCard message={GET_GISTS_ERROR_MESSAGE}/>}
       {returnedGists.length > 0 && <GistsList gists={returnedGists}/>}
     </>
   );

@@ -8,3 +8,6 @@ export const MD_COLOR = '#b300b3';
 export const DEFAULT_COLOR = '#33cc33';
 
 export const NUMBER_OF_MOST_RECENT_FORKS = 3;
+
+export const GET_GISTS_ERROR_MESSAGE = 'The username is invalid or the number of requests to the ' +
+  'API from this IP has been exceeded.';
