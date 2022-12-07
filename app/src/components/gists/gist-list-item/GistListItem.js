@@ -1,7 +1,7 @@
 import GistFilesList from "./GistFilesList";
 import styles from './GistListItem.module.css';
 import {useApi} from "../../../hooks/use-api";
-import {formatGetGistFileContent, formatGetGistForks} from "../../../lib/gists-request-formatter";
+import {formatGetGistFileContent, formatGetGistForks} from "../../../lib/gists/gists-request-formatter";
 import GistFileContent from "./GistFileContent";
 import {useEffect, useState} from "react";
 import GistForksList from "./GistForksList";

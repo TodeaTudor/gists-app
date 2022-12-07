@@ -1,7 +1,7 @@
 import GistForkCard from "./GistForkCard";
 import styles from './GistForksList.module.css';
-import {getMostRecentForks} from "../../../lib/gists-formatter";
-import {NUMBER_OF_MOST_RECENT_FORKS} from "../../../lib/constants";
+import {getMostRecentForks} from "../../../lib/gists/gists-formatter";
+import {NUMBER_OF_MOST_RECENT_FORKS} from "../../../lib/gists/gists-constants";
 
 const GistForksList = (props) => {
 

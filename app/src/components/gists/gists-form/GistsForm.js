@@ -3,7 +3,7 @@ import FormInput from "../../common/form-input/FormInput";
 import FormButton from "../../common/form-button/FormButton";
 import { useState } from "react";
 import SelectDropdown from "../../common/select-dropdown/SelectDropdown";
-import {GISTS_PER_PAGE_DEFAULT_VALUE, GISTS_PER_PAGE_VALUES} from "../../../lib/constants";
+import {GISTS_PER_PAGE_DEFAULT_VALUE, GISTS_PER_PAGE_VALUES} from "../../../lib/gists/gists-constants";
 
 const GistsForm = (props) => {
   const [username, setUsername] = useState('');

@@ -1,4 +1,4 @@
-import {formatGistFiles} from "../../../lib/gists-formatter";
+import {formatGistFiles} from "../../../lib/gists/gists-formatter";
 import GistFileCard from "./GistFileCard";
 import styles from './GistFilesList.module.css';
 

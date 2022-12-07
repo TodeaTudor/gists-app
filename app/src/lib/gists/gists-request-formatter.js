@@ -1,4 +1,4 @@
-import {GISTS_API_URL} from "./constants";
+import {GISTS_API_URL} from "./gists-constants";
 
 export const formatGetGistsByUsername = (username, gistsPerPage) => {
   return {

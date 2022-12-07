@@ -1,10 +1,10 @@
 import GistsForm from "../components/gists/gists-form/GistsForm";
 import {useApi} from "../hooks/use-api";
-import {formatGetGistsByUsername} from "../lib/gists-request-formatter";
+import {formatGetGistsByUsername} from "../lib/gists/gists-request-formatter";
 import ErrorCard from "../components/common/error-card/ErrorCard";
 import LoadingSpinner from "../components/common/loading-spinner/LoadingSpinner";
 import GistsList from "../components/gists/gists-list/GistsList";
-import {GET_GISTS_EMPTY_MESSAGE, GET_GISTS_ERROR_MESSAGE} from "../lib/constants";
+import {GET_GISTS_EMPTY_MESSAGE, GET_GISTS_ERROR_MESSAGE} from "../lib/gists/gists-constants";
 
 const GistsListingPage = () => {
 

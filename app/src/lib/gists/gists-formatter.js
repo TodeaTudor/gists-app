@@ -1,4 +1,4 @@
-import {DEFAULT_COLOR, JAVA_COLOR, JS_COLOR, MD_COLOR, PY_COLOR, TXT_COLOR} from "./constants";
+import {DEFAULT_COLOR, JAVA_COLOR, JS_COLOR, MD_COLOR, PY_COLOR, TXT_COLOR} from "./gists-constants";
 
 export const formatGistFiles = (gistFilesObject) => {
   const gistFiles = [];

@@ -1,4 +1,4 @@
-import {mapFileExtensionToColor} from "../../../lib/gists-formatter";
+import {mapFileExtensionToColor} from "../../../lib/gists/gists-formatter";
 import styles from './FileExtensionBadge.module.css';
 
 const FileExtensionBadge = (props) => {
