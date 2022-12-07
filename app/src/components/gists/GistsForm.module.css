@@ -1,0 +1,10 @@
+.form-container {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+}
+
+.form {
+    transform: translate(-49%);
+}
+
