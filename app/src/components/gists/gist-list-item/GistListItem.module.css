@@ -1,0 +1,7 @@
+.gist-list-item-container {
+    border: 1px solid black;
+    display: block;
+    margin-top: 10px;
+    width: 50%;
+    border-radius: 5px;
+}
