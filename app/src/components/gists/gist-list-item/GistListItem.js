@@ -39,7 +39,7 @@ const GistListItem = (props) => {
 
   return (
     <li key={props.gist.id} className={styles['gist-list-item-container']}>
-      <p><b>Gist id</b>: {props.gist.id}</p>
+      <p><b>Gist URL</b>: <a href={props.gist.html_url}>{props.gist.html_url}</a></p>
       <GistFilesList handleFileContentRequest={handleFileContentRequest} gistFiles={props.gist.files}/>
       {selectedFile !== '' && <GistFileContent fileName={selectedFile} fileContent={fileContent}/>}
       {forks.length > 0 && <GistForksList forks={forks}/>}

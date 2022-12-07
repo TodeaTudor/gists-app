@@ -8,7 +8,7 @@ const GistFilesList = (props) => {
 
   return (
     <>
-      <p><b>Gist files</b>:</p>
+      <p><b>Gist Files</b>:</p>
       <ul className={styles['ul']}>
         {files.map((file, index) => {
           return (
