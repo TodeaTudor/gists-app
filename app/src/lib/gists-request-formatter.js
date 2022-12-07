@@ -19,3 +19,13 @@ export const formatGetGistFileContent = (fileUrl) => {
     },
   };
 }
+
+export const formatGetGistForks = (gistId) => {
+  return {
+    url: `${GISTS_API_URL}/gists/${gistId}/forks`,
+    method: 'GET',
+    headers: {
+      'Accept': 'application/vnd.github+json',
+    },
+  };
+}

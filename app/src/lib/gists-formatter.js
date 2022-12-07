@@ -31,3 +31,11 @@ export const mapFileExtensionToColor = (extension) => {
       return DEFAULT_COLOR;
   }
 }
+
+export const getMostRecentForks = (forks, limit) => {
+  forks.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+
+  return forks.slice(-limit);
+}

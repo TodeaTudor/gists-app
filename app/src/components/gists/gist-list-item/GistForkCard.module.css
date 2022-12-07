@@ -1,0 +1,13 @@
+.fork-card-container {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.fork-card-avatar {
+    width: 24px;
+    height: auto;
+    padding-right: 5px;
+}

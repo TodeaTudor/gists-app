@@ -6,3 +6,5 @@ export const JAVA_COLOR = '#ff9900';
 export const TXT_COLOR = '#ffffff';
 export const MD_COLOR = '#b300b3';
 export const DEFAULT_COLOR = '#33cc33';
+
+export const NUMBER_OF_MOST_RECENT_FORKS = 3;

@@ -1,14 +1,27 @@
 import GistFiles from "./GistFiles";
 import styles from './GistListItem.module.css';
 import {useApi} from "../../../hooks/use-api";
-import {formatGetGistFileContent} from "../../../lib/gists-request-formatter";
+import {formatGetGistFileContent, formatGetGistForks} from "../../../lib/gists-request-formatter";
 import GistFileContent from "./GistFileContent";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import GistForksList from "./GistForksList";
 
 const GistListItem = (props) => {
 
   const [selectedFile, setSelectedFile] = useState('');
-  const {result, sendRequest: getFileContent} = useApi();
+
+  const {result: fileContent, sendRequest: getFileContent} = useApi();
+  const {result: forks, sendRequest: getGistForks} = useApi();
+
+  useEffect(() => {
+    const getForks = async () => {
+      await getGistForks({
+        requestData: formatGetGistForks(props.gist.id),
+      });
+    }
+
+    getForks();
+  }, [getGistForks, props.gist.id]);
 
   const handleFileContentRequest = async (fileUrl, fileName) => {
     await getFileContent({
@@ -21,7 +34,8 @@ const GistListItem = (props) => {
   return (
     <li key={props.gist.id} className={styles['gist-list-item-container']}>
       <GistFiles handleFileContentRequest={handleFileContentRequest} gistFiles={props.gist.files}/>
-      {selectedFile !== '' && <GistFileContent fileName={selectedFile} fileContent={result}/>}
+      {selectedFile !== '' && <GistFileContent fileName={selectedFile} fileContent={fileContent}/>}
+      {forks.length > 0 && <GistForksList forks={forks}/>}
     </li>
   )
 }

@@ -31,6 +31,7 @@ export const useApi = () => {
       }
 
       const data = await response.json();
+      console.log(data);
       setResult(data);
     } catch (error) {
       setError(error);
