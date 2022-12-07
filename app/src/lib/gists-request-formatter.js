@@ -9,3 +9,13 @@ export const formatGetGistsByUsername = (username) => {
     },
   };
 }
+
+export const formatGetGistFileContent = (fileUrl) => {
+  return {
+    url: `${fileUrl}`,
+    method: 'GET',
+    headers: {
+      'Accept': 'application/text',
+    },
+  };
+}

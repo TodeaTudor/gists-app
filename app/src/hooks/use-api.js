@@ -25,6 +25,11 @@ export const useApi = () => {
         setError('Invalid request');
       }
 
+      if (formattedRequestData.headers['Accept'] === 'application/text') {
+        const data = await response.text();
+        setResult(data);
+      }
+
       const data = await response.json();
       setResult(data);
     } catch (error) {

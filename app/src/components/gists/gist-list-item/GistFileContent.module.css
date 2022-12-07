@@ -1,0 +1,10 @@
+.file-content-container {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.file-content-text-box {
+    width: 80%;
+    height: 100px;
+}

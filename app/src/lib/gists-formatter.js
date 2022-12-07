@@ -6,7 +6,7 @@ export const formatGistFiles = (gistFilesObject) => {
   for (const fileName in gistFilesObject) {
     gistFiles.push({
       fileName: fileName.split('.').at(0),
-      content: gistFilesObject[fileName].content,
+      content_url: gistFilesObject[fileName].raw_url,
       extension: fileName.split('.').at(-1),
     })
   }

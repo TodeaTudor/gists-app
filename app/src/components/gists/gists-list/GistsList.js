@@ -7,7 +7,7 @@ const GistsList = (props) => {
     <ul className={styles['ul']}>
       {props.gists.map((gist) => {
         return (
-          <GistListItem gist={gist}/>
+          <GistListItem key={gist.id} gist={gist}/>
         );
       })}
     </ul>
