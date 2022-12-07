@@ -8,7 +8,7 @@ const GistForksList = (props) => {
   return (
     <>
       <p><b>Gist Forks</b>:</p>
-      <ul className={styles['ul']}>
+      <ul className={styles['list']}>
         {getMostRecentForks(props.forks, NUMBER_OF_MOST_RECENT_FORKS).map((fork, index) => {
           return (
             <li key={index}>

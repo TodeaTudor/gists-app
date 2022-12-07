@@ -4,8 +4,8 @@ const FormInput = (props) => {
 
   return (
     <>
-      <label htmlFor="genericInput" className={styles['label']}>{props.label}</label>
-      <input id="genericInput" type={props.type} placeholder={props.placeholder} className={styles.input} value={props.value} onChange={props.handleOnChange}/>
+      <label htmlFor="genericInput" className={styles['generic-label']}>{props.label}</label>
+      <input id="genericInput" type={props.type} placeholder={props.placeholder} className={styles['generic-input']} value={props.value} onChange={props.handleOnChange}/>
     </>
   );
 }

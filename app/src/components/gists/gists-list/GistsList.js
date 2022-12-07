@@ -5,7 +5,7 @@ const GistsList = (props) => {
 
   return (
     <div className={styles['gist-list-container']}>
-      <ul className={styles['ul']}>
+      <ul className={styles['list']}>
         {props.gists.map((gist) => {
           return (
             <GistListItem key={gist.id} gist={gist}/>

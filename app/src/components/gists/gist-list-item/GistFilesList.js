@@ -9,10 +9,10 @@ const GistFilesList = (props) => {
   return (
     <>
       <p><b>Gist Files</b>:</p>
-      <ul className={styles['ul']}>
+      <ul className={styles['list']}>
         {files.map((file, index) => {
           return (
-            <li key={index} className={styles['.li']}>
+            <li key={index}>
               <GistFileCard handleFileContentRequest={props.handleFileContentRequest} file={file}/>
             </li>
           )
