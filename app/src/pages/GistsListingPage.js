@@ -10,11 +10,10 @@ const GistsListingPage = () => {
 
   const { isLoading, result: returnedGists, error, sendRequest: requestGists } = useApi();
 
-  const submitForm = (username) => {
+  const submitForm = (username, gistsPerPage) => {
     requestGists({
-      requestData: formatGetGistsByUsername(username),
+      requestData: formatGetGistsByUsername(username, gistsPerPage),
     });
-
   }
 
   return (

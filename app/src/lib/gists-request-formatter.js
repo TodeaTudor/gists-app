@@ -1,8 +1,8 @@
 import {GISTS_API_URL} from "./constants";
 
-export const formatGetGistsByUsername = (username) => {
+export const formatGetGistsByUsername = (username, gistsPerPage) => {
   return {
-    url: `${GISTS_API_URL}/users/${username}/gists`,
+    url: `${GISTS_API_URL}/users/${username}/gists?per_page=${gistsPerPage}`,
     method: 'GET',
     headers: {
       'Accept': 'application/vnd.github+json',

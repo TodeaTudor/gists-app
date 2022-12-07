@@ -13,3 +13,6 @@ export const GET_GISTS_ERROR_MESSAGE = 'The username is invalid or the number of
   'API from this IP has been exceeded.';
 
 export const GET_GISTS_EMPTY_MESSAGE = 'The user has no public gists';
+
+export const GISTS_PER_PAGE_VALUES = [10, 20, 30, 50, 100];
+export const GISTS_PER_PAGE_DEFAULT_VALUE = 10;
